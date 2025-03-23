@@ -8,6 +8,8 @@
 }
 
 /*---------------------------------------Encabezado-------------------------------------------------------------------------------------------------------------------------*/
+
+/*Flexbox y Boxmodel para encabezado*/
 header{
     display: flex;
     background-color: rgb(29, 28, 28);
@@ -19,26 +21,32 @@ header{
 
 
 /*Menú de navegación*/
+
+/*Color de fondo de la barra*/
 .navbar{
     background-color:  rgb(29, 28, 28);
 }
 
+/*Color y tamaño de letra de cada item*/
 .navbar .nav-link{
     color: rgb(146, 131, 103);
     font-size: large
 }
 
+/*Color, negrita y tamaño de letra del item actual*/
 .navbar .nav-link.active {
     color: rgb(146, 131, 103);
     font-weight: bold;
     font-size: larger
 }
 
+/*Color de fondo y borde del input buscar*/
 .form-control.me-2{
     background-color: white;
     border: 2px solid rgb(85, 60, 48);
 }
 
+/*Color de fondo y borde del botón buscar*/
 .btn.btn-outline-success{
     background-color: rgb(146, 131, 103);
     border: 2px solid rgb(66, 48, 40);
@@ -48,6 +56,7 @@ header{
 
 /*---------------------------------Principal----------------------------------------------------------------------------------------------------------------------------------*/
 
+/*Flexbox y boxmodel del main*/
 main{
     display: flex;
     flex-direction: column;
@@ -81,7 +90,23 @@ h4{
     font-size: 3vh;
 }
 
-/*Respuestas en preg frecuentes*/
+h5{
+    color: rgb(88, 77, 46);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2vh;
+    text-align: center;
+    margin: 5px;
+}
+
+.productos-nombre{
+    padding: 5px;
+    background-color: white;
+    border: 1px solid rgb(88, 77, 46);
+    border-radius: 100px;
+    font-weight: bold;
+}
+
+/*Respuestas en preguntas frecuentes*/
 h3{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2vh;
@@ -91,13 +116,14 @@ h3{
 }
 
 /*Imágenes*/
-.ppal{
+
+.principal{
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
 }
-.imagen-ppal{
+.principal-imagen{
     height: 30vh;
     width: 30vh;
     border: 2px solid rgb(88, 77, 46);
@@ -109,8 +135,8 @@ h3{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
-    column-gap: 30px;
-    row-gap: 30px;
+    column-gap: 80px;
+    row-gap: 50px;
     padding: 40px;
 }
 
@@ -119,9 +145,8 @@ form{
     color: rgb(88, 77, 46);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2.5vh;
-    padding: 30px;
+    padding: 25x;
 }
-
 
 /*Botón para enviar mensaje formulario*/
 .buttom{
@@ -139,7 +164,29 @@ form{
     padding: 7px;
 }
 
+/*Grid para íconos redes sociales*/
+.red{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 20px;
+    align-items: center;
+    padding: 30px;
+}
+
+/*Tamaño íconos redes sociales*/
+.red-logo{
+    width: 80px;
+    height: 80px;
+}
+
+/*Negrita en letras redes sociales*/
+.red-nombre{
+    font-weight: bold;
+}
+
 /*------------------------------------------------------------------------------------Pie de página-----------------------------------------------------------------------------*/
+
 footer{
     text-align: center;
     background-color: rgb(29, 28, 28);
@@ -154,29 +201,11 @@ footer p{
     padding: 5px
 }
 
-/*Media queries para mobile*/
-@media (max-width: 600px) {
-    main{
-        padding: 20px;
-    }
 
-    h1, h2, h4{
-        text-align: center;
-        margin: 10px 0;
-    }
-    footer p{
-        font-size: 16px;
-        padding: 10px;
-    }
-    .ppal{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .imagen.ppal{
-        height: 25hv;
-        width: 25hv;
-    }
+/*----------------------------------Media queries para mobile---------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 600px) {
+
+    /*Ajuste tamaño encabezado*/
    header{
     height: auto;
     padding: 10px 20px;
@@ -184,28 +213,62 @@ footer p{
    .logo{
     max-width: 150px;
    }
+   /*Ajuste menú de navegación hamburguesa*/
    .navbar-collapse{
     text-align: center;
    }
 
+   /*Ajuste ítems del menú de navegación*/
    .navbar-nav{
     display: flex;
     flex-direction: column;
     gap:10px
    }
+
+   /*Color borde menú hamburguesa*/
    .navbar-toggler{
     border-color: aliceblue;
    }
+
+   /*Ajuste input buscar*/
    .form-control.me-2{
     width: 100%;
     margin-bottom: 10px;
    }
+
+   /*Ajuste botón de buscar*/
    .btn.btn-outline-success{
     width: 100%;
    }
+
+   /*Color fondo menú hamburguesa*/
     .navbar-toggler-icon{
     background-color: rgb(146, 131, 103);
    }
+
+    /*Ajuste tamaño del main*/
+    main{
+        padding: 20px;
+    }
+
+    /*Ajuste títulos, subtítulos*/
+    h1, h2, h4{
+        text-align: center;
+        margin: 10px 0;
+    }
+   
+    /*Ajuste imágenes*/
+    .principal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .principal-imagen{
+        height: 25hv;
+        width: 25hv;
+    }
+    
+   /*Imágenes productos*/
    .productos{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -213,4 +276,10 @@ footer p{
     row-gap: 15px;
     padding: 20px;
 }
+ /*Ajuste en pie de página*/
+ footer p{
+    font-size: 16px;
+    padding: 10px;
 }
+}
+
