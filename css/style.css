@@ -1,285 +1,167 @@
-
-
+@charset "UTF-8";
 /*Reset css*/
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*---------------------------------------Encabezado-------------------------------------------------------------------------------------------------------------------------*/
-
-/*Flexbox y Boxmodel para encabezado*/
-header{
-    display: flex;
-    background-color: rgb(29, 28, 28);
-    align-items: center;
-    height: 40vh;
-    justify-content: space-between;
-    padding: 0 20px;
+/*Header*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(29, 28, 28);
+  height: 40vh;
+  padding: 0 20px;
+}
+header .navbar {
+  background-color: rgb(29, 28, 28);
+  color: rgb(146, 131, 103);
+  font-size: large;
+  font-weight: bold;
+}
+header div div ul .nav-item {
+  color: rgb(146, 131, 103);
+  font-size: large;
+  font-weight: 400;
+}
+header div div ul .nav-link.active {
+  color: rgb(146, 131, 103);
+  font-size: larger;
+  font-weight: bold;
+}
+header div form .form-control.me-2 {
+  background-color: white;
+  border: 2px solid rgb(85, 60, 48);
+}
+header div .btn.btn-outline-success {
+  background-color: rgb(146, 131, 103);
+  border: 2px solid rgb(66, 48, 40);
+  color: rgb(66, 48, 40);
+  font-size: medium;
+  font-weight: bold;
 }
 
-
-/*Menú de navegación*/
-
-/*Color de fondo de la barra*/
-.navbar{
-    background-color:  rgb(29, 28, 28);
+/*Main*/
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 40px;
+  background: beige;
+}
+main h1 {
+  color: rgb(88, 77, 46);
+  font-size: 8vh;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+main h2 {
+  color: rgb(88, 77, 46);
+  font-size: 4.5vh;
+  font-weight: 400;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+main h3 {
+  color: rgb(88, 77, 46);
+  font-size: 2vh;
+  font-weight: 400;
+  padding: 10px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+main h4 {
+  color: rgb(88, 77, 46);
+  font-size: 3vh;
+  font-weight: 400;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 40px;
+}
+main div div h5 {
+  color: rgb(88, 77, 46);
+  font-size: 2vh;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 5px;
+  text-align: center;
+}
+main div .productos-nombre {
+  background-color: white;
+  border: 1px solid rgb(88, 77, 46);
+  border-radius: 100px;
+  padding: 5px;
+}
+main .productos {
+  display: grid;
+  grid-template-columns: repeat 4, 1fr;
+  grid-template-rows: repeat 2, auto;
+  gap: 80px;
+  padding: 40px;
+}
+main .principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+main .principal .principal-imagen {
+  height: 30vh;
+  width: 30vh;
+  border: 2px solid rgb(88, 77, 46);
+  border-radius: 10px;
+}
+main form {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 25px;
+  color: rgb(88, 77, 46);
+  font-size: 2.5vh;
+  font-weight: 400;
+}
+main form div .buttom {
+  color: white;
+  font-size: 2.5vh;
+  font-weight: 400;
+  padding: 5px;
+  background-color: rgb(88, 77, 46);
+  margin-top: 20px;
+  border: 1px solid rgb(29, 28, 28);
+  border-radius: 10px;
+}
+main form .formulario {
+  padding: 7px;
+}
+main .red {
+  display: grid;
+  grid-template-columns: repeat 2, 1fr;
+  grid-template-rows: repeat 3, 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 30px;
+}
+main .red .red-logo {
+  width: 80px;
+  height: 80px;
+}
+main .red .red-nombre {
+  font-weight: bold;
 }
 
-/*Color y tamaño de letra de cada item*/
-.navbar .nav-link{
-    color: rgb(146, 131, 103);
-    font-size: large
+/*Pie de página*/
+footer {
+  background-color: rgb(29, 28, 28);
+  text-align: center;
+  padding: 40px;
+}
+footer p {
+  text-align: center;
+  color: rgb(146, 131, 103);
+  font-size: medium;
+  font-weight: bold;
+  padding: 5px;
 }
 
-/*Color, negrita y tamaño de letra del item actual*/
-.navbar .nav-link.active {
-    color: rgb(146, 131, 103);
-    font-weight: bold;
-    font-size: larger
-}
-
-/*Color de fondo y borde del input buscar*/
-.form-control.me-2{
-    background-color: white;
-    border: 2px solid rgb(85, 60, 48);
-}
-
-/*Color de fondo y borde del botón buscar*/
-.btn.btn-outline-success{
-    background-color: rgb(146, 131, 103);
-    border: 2px solid rgb(66, 48, 40);
-    color: rgb(66, 48, 40);
-    font-weight: bold;
-}
-
-/*---------------------------------Principal----------------------------------------------------------------------------------------------------------------------------------*/
-
-/*Flexbox y boxmodel del main*/
-main{
-    display: flex;
-    flex-direction: column;
-    background-color: beige;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-}
-
-/*Títulos principales*/
-h1{
-    color: rgb(88, 77, 46);
-    text-transform: uppercase;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 8vh;
-}
-
-/*Subtítulos*/
-h2{
-    color: rgb(88, 77, 46);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    font-size: 4.5vh;
-}
-
-h4{
-    color: rgb(88, 77, 46);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: 40px;
-    font-size: 3vh;
-}
-
-h5{
-    color: rgb(88, 77, 46);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2vh;
-    text-align: center;
-    margin: 5px;
-}
-
-.productos-nombre{
-    padding: 5px;
-    background-color: white;
-    border: 1px solid rgb(88, 77, 46);
-    border-radius: 100px;
-    font-weight: bold;
-}
-
-/*Respuestas en preguntas frecuentes*/
-h3{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2vh;
-    color:rgb(88, 77, 46);
-    padding:10px;
-    text-align: center;
-}
-
-/*Imágenes*/
-
-.principal{
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.principal-imagen{
-    height: 30vh;
-    width: 30vh;
-    border: 2px solid rgb(88, 77, 46);
-    border-radius: 10px;
-}
-
-/*Grid para imágenes de productos*/
-.productos{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, auto);
-    column-gap: 80px;
-    row-gap: 50px;
-    padding: 40px;
-}
-
-/*Formulario de contacto*/
-form{
-    color: rgb(88, 77, 46);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2.5vh;
-    padding: 25x;
-}
-
-/*Botón para enviar mensaje formulario*/
-.buttom{
-    color:white;
-    font-size: 2.5vh;
-    padding: 5px;
-    background-color:rgb(88, 77, 46);
-    margin-top: 20px;
-    border: 1px solid rgb(29, 28, 28) ;
-    border-radius: 10px;
-}
-
-/*Separación de cada input del formulario*/
-.formulario{
-    padding: 7px;
-}
-
-/*Grid para íconos redes sociales*/
-.red{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    row-gap: 20px;
-    align-items: center;
-    padding: 30px;
-}
-
-/*Tamaño íconos redes sociales*/
-.red-logo{
-    width: 80px;
-    height: 80px;
-}
-
-/*Negrita en letras redes sociales*/
-.red-nombre{
-    font-weight: bold;
-}
-
-/*------------------------------------------------------------------------------------Pie de página-----------------------------------------------------------------------------*/
-
-footer{
-    text-align: center;
-    background-color: rgb(29, 28, 28);
-    padding:40px
-}
-
-footer p{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: rgb(146, 131, 103);
-    padding: 5px
-}
-
-
-/*----------------------------------Media queries para mobile---------------------------------------------------------------------------------------------------------------------*/
-@media (max-width: 600px) {
-
-    /*Ajuste tamaño encabezado*/
-   header{
-    height: auto;
-    padding: 10px 20px;
-   }
-   .logo{
-    max-width: 150px;
-   }
-   /*Ajuste menú de navegación hamburguesa*/
-   .navbar-collapse{
-    text-align: center;
-   }
-
-   /*Ajuste ítems del menú de navegación*/
-   .navbar-nav{
-    display: flex;
-    flex-direction: column;
-    gap:10px
-   }
-
-   /*Color borde menú hamburguesa*/
-   .navbar-toggler{
-    border-color: aliceblue;
-   }
-
-   /*Ajuste input buscar*/
-   .form-control.me-2{
-    width: 100%;
-    margin-bottom: 10px;
-   }
-
-   /*Ajuste botón de buscar*/
-   .btn.btn-outline-success{
-    width: 100%;
-   }
-
-   /*Color fondo menú hamburguesa*/
-    .navbar-toggler-icon{
-    background-color: rgb(146, 131, 103);
-   }
-
-    /*Ajuste tamaño del main*/
-    main{
-        padding: 20px;
-    }
-
-    /*Ajuste títulos, subtítulos*/
-    h1, h2, h4{
-        text-align: center;
-        margin: 10px 0;
-    }
-   
-    /*Ajuste imágenes*/
-    .principal{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .principal-imagen{
-        height: 25hv;
-        width: 25hv;
-    }
-    
-   /*Imágenes productos*/
-   .productos{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(8, auto);
-    row-gap: 15px;
-    padding: 20px;
-}
- /*Ajuste en pie de página*/
- footer p{
-    font-size: 16px;
-    padding: 10px;
-}
-}
-
+/*# sourceMappingURL=style.css.map */
