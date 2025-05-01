@@ -4,6 +4,12 @@
 //Importar mixin
 @import "../abstracts/mixins";
 
+/*Body*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 /*Header*/
 header{
@@ -11,38 +17,30 @@ header{
     background-color: $color-dos;
     height:40vh;
     padding: 0 20px;
-    .navbar{
-        background-color: $color-dos;
-        @include fuentes ($color-uno, large, bold)
-        }
-        div{
-            div{
-                ul{
-                    .nav-item{
-                        @include fuentes ($color-uno, large, 400)
-                    }
-                        .nav-link.active{
-                            @include fuentes ($color-uno, larger, bold)
-                        }
-                }
-            }
-            form {
-                .form-control.me-2{
-                    background-color: $color-tres;
-                    border: 2px solid $color-cuatro;
-                }
-            }   .btn.btn-outline-success{
-                background-color: $color-uno;
-                border: 2px solid $color-cinco;
-                @include fuentes ($color-cinco, medium, bold);
-            }
-        }
+}
+
+    /*Estilos de bootstrap por separado por especificidad*/
+    .navbar .nav-link {
+        @include fuentes($color-uno, large, bold);
     }
+
+    .navbar .nav-link.active {
+        @include fuentes($color-uno, larger, bold);
+    }
+
+    .btn-custom{
+        background-color: $color-dos;
+        border: 2px solid $color-uno;
+        @include fuentes ($color-uno, medium, bold);
+        cursor: pointer;
+    }
+
 
 /*Main*/
 main{
     @include flex (flex, center, center);
     flex-direction: column;
+    flex: 1;
     padding: 40px;
     background: $color-seis;
     h1{
@@ -63,7 +61,7 @@ main{
     h4{
         @include fuentes ($color-font, 3vh, 400);
         font-family: $font-uno;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
     }
     div{
         div{
@@ -74,65 +72,80 @@ main{
                 text-align: center;
             }
         }
-    .productos-nombre{
-        background-color: $color-tres;
-        border: 1px solid $color-font;
-        border-radius: 100px;
-        padding: 5px;
     }
-        
-    }
-    .productos{
-        @include grid (grid, repeat(4, 1fr), repeat(2, auto), 80px);
-        padding: 40px;
-    }
+
+    /*Imágenes inicio y productos*/
     .principal{
         @include flex (flex, center, center);
         gap: 20px;
-        flex-wrap: wrap;
+        @include grid (grid, repeat(4, 1fr), repeat(2, auto), 80px);
+        padding: 20px;
         .principal-imagen{
-            height: 30vh;
-            width: 30vh;
-            border: 2px solid $color-font;
-            border-radius: 10px;
+            @include img (30vh, 30vh, 2px solid $color-font, 10px);
+        }
+        .productos-nombre{
+            background-color: $color-tres;
+            border: 1px solid $color-font;
+            border-radius: 100px;
+            padding: 5px;
         }
     }
+
+    /*Imagen sobre nosotros*/
+    .nosotros{
+        .img-nosotros{
+            @include img (30vh, 30vh, 2px solid $color-font, 10px);
+        }
+    }
+
+    /*Sección de contacto*/
     form{
         font-family: $font-uno;
-        padding: 25px;
+        padding: 30px 20px;
+        background-color: $color-seis;
+        border-radius: 10px;
+        max-width: 600px;
+        margin: auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         @include fuentes ($color-font, 2.5vh, 400);
         div{
+            @include flex (flex, center, center);
             .buttom{
-                @include fuentes ($color-tres, 2.5vh, 400);
-                padding: 5px;
+                @include fuentes ($color-tres, 2.2vh, 400);
+                padding: 10px 20px;
                 background-color: $color-font;
-                margin-top: 20px;
-                border: 1px solid $color-dos;
+                color: $color-tres;
+                border: 2px solid $color-dos;
                 border-radius: 10px;
+                cursor: pointer;
             }
         }
         .formulario{
             padding: 7px;
+            @include flex (flex, center, center);
+            flex-direction: column;
+            margin-bottom: 20px;
+               label {
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                    font-size: 2.2vh;
+                    color: $color-font;
+                }
         }
     }
     .red{
-        @include grid (grid, repeat (2, 1fr), repeat (3, 1fr), 20px);
-        align-items: center;
+        @include grid (grid, auto 1fr, none, 10px);
+         align-items: center;
         padding: 30px;
         .red-logo{
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
         }
         .red-nombre{
-            font-weight: bold
+            @include fuentes ($color-font, 2vh, bold)
         }
     }
     }
-
-
-
-
-
 
 /*Pie de página*/
 footer{

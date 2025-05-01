@@ -1,3 +1,4 @@
+
 //Mixing flex
 @mixin flex ($flex, $align, $justify){
     display: $flex;
@@ -16,4 +17,11 @@
     grid-template-columns: $column;
     grid-template-rows: $row;
     gap: $gap;
+}
+
+@mixin img ($height, $width, $border, $border-radius) {
+    height: $height;
+    width: $width;
+    border: $border;
+    border-radius: $border-radius;
 }

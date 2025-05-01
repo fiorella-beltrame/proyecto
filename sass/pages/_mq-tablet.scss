@@ -1,0 +1,84 @@
+//Import variables
+@import "../abstracts/variables";
+
+//Import mixins
+@import "../abstracts/mixins";
+
+/*Media queries para tablet*/
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+      height: auto;
+      padding: 20px;
+      div{
+        .logo{
+          max-width: 300px;
+          height: auto;
+        }
+      }
+      nav{
+        div{
+            .navbar-collapse{
+                text-align: center;
+                .navbar-nav{
+                    @include flex (flex, center, center);
+                    flex-direction: row;
+                    gap: 20px;
+                }
+            }
+            .navbar-toggler{
+                border-color: $color-siete;
+                .navbar-toggler-icon{
+                    background-color: $color-uno;
+                }
+            }
+            form{
+                .form-control.me-2{
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                .btn.btn-custom{
+                    width: 100%;
+                }
+            }
+        }
+      }
+    }
+    
+    main{
+      padding: 50px;
+      h1{
+          font-size: 2.5em;
+      }
+      h2{
+          font-size: 1.8rem;
+      }
+      h3{
+          font-size: 1.4rem;
+      }
+      h4{
+          font-size: 1.3rem;
+      }
+      h1, h2, h3, h4{
+          text-align: center;
+      }
+      .principal{
+          @include grid (grid, repeat(2, 1fr), repeat(2, auto), 30px);
+          padding: 20px;
+          .principal-imagen{
+              height: 25vh;
+              width: 25vh;
+              object-fit: cover;
+          }
+      }
+    
+  footer{
+      p{
+          padding: 20px;
+          font-size: 1.3rem;
+      }
+  }
+}
+}
+
+    
